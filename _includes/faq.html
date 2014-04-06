@@ -1,0 +1,11 @@
+<section class="faq">
+  <figure class="bkgd"></figure>
+  <div class="inside-wrap">
+  <h1>{{ page.faq.title }}</h1>
+  <p>{{ page.faq.intro }}</p>
+  {% for item in page.faq.list %}
+  <h2>{{ item.q }}</h2>
+  <p>{{ item.a }}</p>
+  {% endfor %}
+  </div>
+</section>

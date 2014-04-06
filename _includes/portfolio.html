@@ -1,0 +1,17 @@
+<section class="portfolio">
+  <figure class="bkgd"></figure>
+  <ul>
+    <li class="intro">
+      <figure></figure>
+      <h1>{{ page.portfolio.title }}</h1>
+      <p>{{ page.portfolio.intro }}</p>
+    </li>
+    {% for company in page.portfolio.companies %}
+    <li class="co {{ company.id }}">
+      <figure style="background: url(assets/img/port-{{ company.id }}.png) center center no-repeat;"></figure>
+      <h2 style="background: url(assets/img/logo-{{ company.id }}.png) center center no-repeat;"><a href="{{ company.url }}">{{ company.name }}</a></h2>
+      <p>{{ company.tagline }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

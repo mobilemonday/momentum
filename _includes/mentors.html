@@ -1,0 +1,18 @@
+<section class="mentors">
+  <figure class="bkgd"></figure>
+  <ul>
+    <li class="first">
+      <figure></figure>
+      <h1>{{ page.mentors.title }}</h1>
+      <p>{{ page.mentors.intro }}</p>
+    </li>
+    {% for mentor in page.mentors.mentors %}
+    <li class="person">
+      <figure style="background-image: url({{ mentor.photo }});"></figure>
+      <h3>{{ mentor.name }}</h3>
+      <h4>{{ mentor.title }}</h4>
+      <a href="{{ mentor.url }}"></a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

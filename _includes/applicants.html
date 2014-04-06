@@ -1,0 +1,13 @@
+<section class="applicants">
+  <figure class="bkgd"></figure>
+  <h1>{{ page.applicants.title }}</h1>
+  <p>{{ page.applicants.intro }}</p>
+  <dl>
+    {% for attribute in page.applicants.attributes %}
+    <dt>{{ attribute.name }}</dt>
+    {% for item in attribute.list %}
+    <dd>{{ item.bullet }}</dd>
+    {% endfor %}
+    {% endfor %}
+  </dl>
+</section>

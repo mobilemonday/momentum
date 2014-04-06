@@ -1,0 +1,18 @@
+<section class="team">
+  <figure class="bkgd"></figure>
+  <h1>{{ page.team.title }}</h1>
+  <p>{{ page.team.intro }}</p>
+  <div class="inside-wrap">
+    <ul>
+    {% for member in page.team.members %}
+    <li class="person">
+      <figure style="background-image: url(assets/img/{{ member.photo }});"></figure>
+      <h2>{{ member.name }}</h2>
+      <h3>{{ member.title }}</h3>
+      <p class="bio">{{ member.cv }}</p>
+      <a href="http://www.linkedin.com/in/{{ member.linkedin }}"><i class="ss-linkedin"></i></a>
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+</section>
