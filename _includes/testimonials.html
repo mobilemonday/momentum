@@ -1,0 +1,33 @@
+<section id="testimonials">
+  <figure class="bkgd"></figure>
+<!--  <header>
+    <h1>Testimonials</h1>
+    <p></p>
+  </header>-->
+  
+  <section class="content inside-wrap">
+  
+  <div class="crsl-items" data-navigation="test-nav">
+    <div class="crsl-wrap">
+      {% for company in page.portfolio.companies %}
+      {% if company.testimonial %}
+      <div class="crsl-item co" >
+        <blockquote>
+          {{ company.testimonial.quote | markdownify }}
+        </blockquote>
+        <footer>&mdash;{{ company.testimonial.source }}</footer>
+        
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+<!--  <div id="test-nav" class="crsl-nav">
+  	<a href="#" class="previous">Previous</a>
+  	<a href="#" class="next">Next</a>
+  </div>-->
+
+
+  </section>
+</section>
+

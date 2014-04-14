@@ -1,23 +1,27 @@
 <section class="partners">
   <figure class="bkgd"></figure>
-  <h1>{{ page.partners.title }}</h1>
-  <p>{{ page.partners.intro }}</p>
-  <h2>Founding Partners</h2>
-  <ul>
-    {% for partner in page.partners.founding %}
-    <li class="founding sponsor">
-      <figure style="background: url(assets/img/{{ partner.logo }}) center center no-repeat;"></figure>
-      <h2>{{ partner.name }}</h2>
-    </li>
-    {% endfor %}
-  </ul>
-  <h2>Community Partners</h2>
-  <ul>
-    {% for partner in page.partners.community %}
-    <li class="community sponsor">
-      <figure style="background: url(assets/img/{{ partner.logo }}) center center no-repeat;"></figure>
-      <h2>{{ partner.name }}</h2>
-    </li>
-    {% endfor %}
-  </ul>
+  <header>
+    <h1>{{ page.partners.title }}</h1>
+    <p>{{ page.partners.intro }}</p>
+  </header>
+  <section class="content inside-wrap">
+    <h2>Founding Partners</h2>
+    <ul>
+      {% for partner in page.partners.founding %}
+      <li class="founding sponsor">
+        <figure style="background: url(assets/img/{{ partner.logo }}) center center no-repeat;"></figure>
+        <h2>{{ partner.name }}</h2>
+      </li>
+      {% endfor %}
+    </ul>
+    <h2>Community Partners</h2>
+    <ul>
+      {% for partner in page.partners.community %}
+      <li class="community sponsor">
+        <figure style="background: url(assets/img/{{ partner.logo }}) center center no-repeat;"></figure>
+        <h2>{{ partner.name }}</h2>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </section>
