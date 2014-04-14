@@ -1,11 +1,13 @@
-<section class="intro">
+<section id="intro">
   <figure class="bkgd"></figure>
-  <h1>{{ page.intro.tagline }}</h1>
-<!--  <ul class="grid">
-    <li><i class="ss-campfire"></i>{{ page.reason1 }}</li>
-    <li><i class="ss-signpost"></i>{{ page.reason2 }}</li>
-    <li><i class="ss-bill"></i>{{ page.reason3 }}</li>
-  </ul>-->
-  <p class="apply">{{ page.intro.button | markdownify }}</p>
-  <p>{{ page.intro.description | markdownify }}</p>
+  <h1 class="logo"><i></i></h1>
+  <h2>{{ page.intro.tagline }}</h2>
+  <p class="apply">{{ page.intro.button }}</p>
+  <div class="points">
+    <ul>
+      {% for benefit in page.intro.benefits %}
+      <li>{{ benefit.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
 </section>

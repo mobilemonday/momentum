@@ -1,11 +1,22 @@
-<section class="faq">
+<section id="faq">
   <figure class="bkgd"></figure>
-  <div class="inside-wrap">
-  <h1>{{ page.faq.title }}</h1>
-  <p>{{ page.faq.intro }}</p>
-  {% for item in page.faq.list %}
-  <h2>{{ item.q }}</h2>
-  <p>{{ item.a }}</p>
-  {% endfor %}
-  </div>
+  <section class="content inside-wrap two-col">
+    <h1>{{ page.faq.title }}</h1>
+    <p>{{ page.faq.intro }}</p>
+    <ul>
+    {% for item in page.faq.list %}
+    <li>
+    <h4>{{ item.q }}</h4>
+    {% if item.a %}<p>{{ item.a }}</p>{% endif %}
+    {% if item.bullets %}
+      <ul>
+        {% for item in item.bullets %}
+        <li>{{ item.a }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+  </section>
 </section>

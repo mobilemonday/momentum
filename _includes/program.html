@@ -1,12 +1,17 @@
-<section class="program">
+<section id="program">
   <figure class="bkgd"></figure>
-  <h1>{{ page.program.title }}</h1>
-  <p>{{ page.program.intro }}</p>
-  <dl>
-    {% for benefit in page.program.benefits %}
-    <dt>{{ benefit.name }}</dt>
-    <dd>{{ benefit.description }}</dd>
-    {% endfor %}
-  </dl>
-  <p>{{ page.program.outro }}</p>
+  <header>
+    <h1>{{ page.program.title }}</h1>
+    <p>{{ page.program.intro }}</p>
+  </header>
+  <section class="content two-col">
+    <ul>
+      {% for benefit in page.program.benefits %}
+      <li>
+        <h4>{{ benefit.name }}</h4>
+        {{ benefit.description | markdownify }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </section>
