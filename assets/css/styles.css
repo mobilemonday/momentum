@@ -283,6 +283,7 @@ section.content {
   background: url(../img/sanfran5.jpg) center center no-repeat;  
   background-size: cover;
   position: relative;
+  padding-bottom: 6rem;
 }
 
 #intro > * {
@@ -316,7 +317,24 @@ section.content {
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
-  padding: 1.5rem 4rem;
+  padding: 2rem 4rem .5rem;
+  margin-bottom: 0;
+}
+
+#intro .points ul.two-col li {
+  color: white;
+  position: relative;
+  line-height: 1.4em;
+  font-size: .8rem;
+  padding-left: 3.5rem;
+  padding-right: 2rem;
+}
+
+#intro .points li i {
+  position: absolute;
+  left: 0;
+  top: .5rem;
+  font-size: 2.5rem;
 }
 
 p.apply {
@@ -777,6 +795,10 @@ width: 66.66%;
 
 }*/
 
+#people {
+  padding-top: 2rem;
+}
+
 #people div > h2 {
   font-weight: 300;
   margin-bottom: 3rem;
@@ -784,6 +806,12 @@ width: 66.66%;
   font-size: 1rem;
   line-height: 1.5em;
   color: #666;
+}
+
+#people .tab {
+  padding-bottom: 4rem;
+  float: left;
+  width: 100%;
 }
 
 #people .tab li {

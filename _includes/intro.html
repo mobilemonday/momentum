@@ -4,9 +4,9 @@
   <h2>{{ page.intro.tagline }}</h2>
   <p class="apply">{{ page.intro.button }}</p>
   <div class="points">
-    <ul>
+    <ul class="two-col">
       {% for benefit in page.intro.benefits %}
-      <li>{{ benefit.name }}</li>
+      <li><i class="icon-{{ benefit.icon }}"></i> {{ benefit.name }}</li>
       {% endfor %}
     </ul>
   </div>
