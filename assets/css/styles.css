@@ -235,6 +235,10 @@ section > *, header.main > * {
   margin-bottom: 2rem;
 }
 
+#contact header h1 {
+  font-size: 2rem;
+}
+
 .wrap > section header p {
   font-size: 1.4rem;
   line-height: 2rem;
