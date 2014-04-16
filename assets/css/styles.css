@@ -822,8 +822,9 @@ width: 66.66%;
 #people .two li {
   min-height: 150px;
   padding-left: 120px;
-  width: 50%;
   padding-right: 2rem;
+  width: 50%;
+  padding-top: .8rem;
 }
 
 #people .three li {
@@ -903,7 +904,7 @@ width: 66.66%;
   overflow: hidden;
 }
 
-#people .two li a {
+#people .two li a.linkedin {
   position: absolute;
   left: 75px;
   background-color: #1a86bc;
@@ -915,7 +916,7 @@ width: 66.66%;
   font: 1.2rem Social !important;
 }
 
-#people .three li a {
+#people .three li a.linkedin {
   position: absolute;
   left: 42px;
   background-color: #1a86bc;
