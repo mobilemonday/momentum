@@ -15,7 +15,7 @@
         <blockquote>
           {{ company.testimonial.quote | markdownify }}
         </blockquote>
-        <footer>&mdash;{{ company.testimonial.source }}</footer>
+        <footer><figure style="background: url({{ company.testimonial.image }}) center center no-repeat; background-size: cover;"></figure> {{ company.testimonial.source }} <span>{{ company.testimonial.title }}</span></footer>
         
       </div>
       {% endif %}
