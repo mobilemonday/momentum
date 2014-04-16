@@ -18,7 +18,7 @@
           <h2>{{ member.name }}</h2>
           <h3>{{ member.title }}</h3>
           <p class="bio">{{ member.cv }}</p>
-          {% if member.linkedin %}<a href="http://www.linkedin.com/in/{{ member.linkedin }}"><i class="ss-linkedin"></i></a>{% endif %}
+          {% if member.linkedin %}<a href="http://www.linkedin.com/in/{{ member.linkedin }}" class="linkedin"><i class="ss-linkedin"></i></a>{% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -30,9 +30,10 @@
       <ul class="two" data-liffect="slideRight">
         {% for partner in page.partners.partners %}
         <li class="sponsor">
-          <figure style="background: url(assets/img/{{ partner.logo }}) center center no-repeat;"></figure>
+          <figure style="background: url({{ partner.logo }}) center center no-repeat; background-size: cover;"></figure>
           <h2>{{ partner.name }}</h2>
           <h3>{{ partner.type }}</h3>
+          <p class="bio"><a href="{{ partner.link }}">{{ partner.link }}</a></p>
         </li>
         {% endfor %}
       </ul>
@@ -47,7 +48,7 @@
           <figure style="background-image: url({{ ambassador.photo }});"></figure>
           <h2>{{ ambassador.name }}</h2>
           <h3>{{ ambassador.city }}</h3>
-          {% if ambassador.linkedin %}<a href="http://www.linkedin.com/in/{{ ambassador.linkedin }}"><i class="ss-linkedin"></i></a>{% endif %}
+          {% if ambassador.linkedin %}<a href="http://www.linkedin.com/in/{{ ambassador.linkedin }}" class="linkedin"><i class="ss-linkedin"></i></a>{% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -62,7 +63,7 @@
           <figure style="background-image: url({{ mentor.photo }});"></figure>
           <h2>{{ mentor.name }}</h2>
           <h3>{{ mentor.title }}</h3>
-          {% if mentor.url %}<a href="{{ mentor.url }}"><i class="ss-linkedin"></i></a>{% endif %}
+          {% if mentor.url %}<a href="{{ mentor.url }}" class="linkedin"><i class="ss-linkedin"></i></a>{% endif %}
         </li>
         {% endfor %}
       </ul>
