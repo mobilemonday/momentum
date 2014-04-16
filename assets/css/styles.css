@@ -546,6 +546,8 @@ section.intro h1 {
   font: 1.5rem/3em 'Merriweather', serif;
   margin-bottom: 1rem;
   color: white;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 #testimonials blockquote p {
@@ -558,9 +560,23 @@ section.intro h1 {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   font-size: 1.5rem;
-  text-align: right;
   margin-bottom: 2rem;
   color: white;
+  white-space: nowrap;
+}
+
+#testimonials footer span {
+  display: block;
+  font-size: .8rem;
+}
+
+#testimonials footer figure {
+  width: 50px;
+  height: 50px;
+  border-radius: 10em;
+  display: block;
+  float: left;
+  margin-right: 1rem;
 }
 
 .portfolio {
