@@ -239,6 +239,12 @@ section > *, header.main > * {
   font-size: 2rem;
 }
 
+#contact header h1 i {
+  position: relative;
+  top: 3px;
+  margin-right: .3rem;
+}
+
 .wrap > section header p {
   font-size: 1.4rem;
   line-height: 2rem;
