@@ -14,13 +14,12 @@ assets/css/symbolicons-block.css
 assets/css/social.css
 
 # JS
-http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
+assets/js/jquery-2.1.0.min.js
 http://squaresend.com/squaresend.js
 assets/js/responsiveCarousel.min.js
 assets/js/application.js
 
 # IMG
-assets/js/application.js
-assets/img/bookcase.jpg
 assets/img/logo.png
 assets/img/sanfran5.jpg
+assets/img/bookcase.jpg
