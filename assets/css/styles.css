@@ -530,10 +530,10 @@ section.intro h1 {
 }*/
 
 #testimonials {
-  background-image: -webkit-linear-gradient(top, rgba(105, 184, 252, 0.88) 0%, rgba(80, 187, 132, 0.84) 100%), url(/assets/img/bookcase.jpg);
-  background-image: -moz-linear-gradient(top, rgba(105, 184, 252, 0.88) 0%, rgba(80, 187, 132, 0.84) 100%), url(/assets/img/bookcase.jpg);
-  background-image: -ms-linear-gradient(top, rgba(105, 184, 252, 0.88) 0%, rgba(80, 187, 132, 0.84) 100%), url(/assets/img/momo.jpg);
-  background-image: linear-gradient(to bottom, rgba(105, 184, 252, 0.88) 0%, rgba(80, 187, 132, 0.84) 100%), url(/assets/img/bookcase.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), url(/assets/img/bookcase.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), url(/assets/img/bookcase.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), url(/assets/img/bookcase.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), url(/assets/img/bookcase.jpg);
   background-size: cover;
   float: left;
   width: 100%;
@@ -553,11 +553,12 @@ section.intro h1 {
 }
 
 #testimonials blockquote {
-  font: 1.5rem/3em 'Merriweather', serif;
+  line-height: 3em;
   margin-bottom: 1rem;
   color: white;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #testimonials blockquote p {
