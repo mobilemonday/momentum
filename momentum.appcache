@@ -1,0 +1,25 @@
+CACHE MANIFEST
+index.html
+
+# CSS
+assets/css/styles.css
+
+# Fonts
+http://fonts.googleapis.com/css?family=Open+Sans:400,300,600
+http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic
+
+# Icons
+assets/css/ios7.css
+assets/css/symbolicons-block.css
+assets/css/social.css
+
+# JS
+assets/js/jquery-2.1.0.min.js
+http://squaresend.com/squaresend.js
+assets/js/responsiveCarousel.min.js
+assets/js/application.js
+
+# IMG
+assets/img/logo.png
+assets/img/sanfran5.jpg
+assets/img/bookcase.jpg
