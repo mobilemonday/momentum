@@ -32,6 +32,16 @@
       .benefit {
         height:300px;
       }
+      .portfolio-item a {
+        background-color: rgb(88,155,166);
+      }
+      .portfolio-item .logo {
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:50% auto;
+        width:360px;
+        min-height:260px;
+      }
       .portfolio-caption {
         height:140px;
       }
@@ -45,6 +55,7 @@
         width:200px;
       }
       .ambassador img, .mentor img {
+        height:150px;
         width:150px;
       }
     </style>
@@ -97,6 +108,9 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <li>
+                        <a class="" href="{{ page.intro.button.link }}">{{ page.intro.button.text }}</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -105,11 +119,11 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header style="background-image: url({{ page.intro.background }});">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">{{ page.intro.tagline }}</div>
-                <!-- <div class="intro-heading">It's Nice To Meet You</div> -->
+                <div class="intro-lead-in">{{ page.intro.sentences.first }}</div>
+                <div class="intro-heading">{{ page.intro.sentences.second }}</div>
                 <a href="{{ page.intro.button.link }}" class="btn btn-xl">{{ page.intro.button.text }}</a>
             </div>
         </div>
@@ -157,7 +171,11 @@
                       <i class="fa fa-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img src="assets/vendor/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                  {% if company.logo != '' %}
+                    <div class="logo" style="background-image: url({{ company.logo }});"></div>
+                  {% else %}
+                    <img src="assets/vendor/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                  {% endif %}
                 </a>
                 <div class="portfolio-caption">
                   <h4>{{ company.name }}</h4>
@@ -177,8 +195,10 @@
             <h3 class="section-subheading text-muted">{{ page.about.intro }}</h3>
           </div>
         </div>
-        <div class="row">
-            {% for item in page.about.list %}
+        {% for item in page.about.list %}
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
               <h4>{{ item.q }}</h4>
               {% if item.a %}<p>{{ item.a }}</p>{% endif %}
               {% if item.bullets %}
@@ -188,8 +208,9 @@
                 {% endfor %}
               </ul>
               {% endif %}
-            {% endfor %}
-        </div>
+            </div>
+          </div>
+        {% endfor %}
       </div>
     </section>
 
@@ -255,7 +276,7 @@
               <div class="col-sm-3">
                 <div class="team-member ambassador">
                   <a href="{{ ambassador.linkedin }}">
-                    <img src="{{ ambassador.photo }}" class="img-responsive img-circle" alt="">
+                    <img src="{{ ambassador.photo }}" class="img-responsive img-circle" alt="{{ ambassador.name }}">
                   </a>
                   <h4>{{ ambassador.name }}</h4>
                   <p class="text-muted">{{ ambassador.city }}</p>
@@ -275,7 +296,11 @@
               <div class="col-sm-3">
                 <div class="team-member mentor">
                   <a href="{{ mentor.url }}">
-                    <img src="{{ mentor.photo }}" class="img-responsive img-circle" alt="">
+                    {% if mentor.photo == '' %}
+                      <img src="assets/vendor/img/team/1.jpg" class="img-responsive img-circle" alt="{{ mentor.name }}">
+                    {% else %}
+                      <img src="{{ mentor.photo }}" class="img-responsive img-circle" alt="{{ mentor.name }}">
+                    {% endif %}
                   </a>
                   <h4>{{ mentor.name }}</h4>
                   <p class="text-muted">{{ mentor.title }}</p>
