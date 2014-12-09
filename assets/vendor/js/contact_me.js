@@ -16,16 +16,20 @@ $(function() {
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
-            }
+            };
+
+            var data = {},
+                formUrl = 'http://www-corsproxy-com-gwqynjms41pa.runscope.net/docs.google.com/forms/d/1f1JkE5SrjZelyQNjqlxELK5RgJQFEF2qmQod4vz1Qsc/formResponse';
+
+            data['entry.2031257096'] = name;
+            data['entry.930024282'] = email;
+            data['entry.538407097'] = phone;
+            data['entry.1349739135'] = message
+
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: formUrl,
                 type: "POST",
-                data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
+                data: data,
                 cache: false,
                 success: function() {
                     // Success message
