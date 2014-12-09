@@ -29,6 +29,9 @@
       .navbar-brand img {
         margin-top:-24px;
       }
+      section#services .row.text-center + .row.text-center {
+        margin-top:1.4em;
+      }
       .portfolio-item a {
         background-color: rgb(88,155,166);
       }
@@ -378,7 +381,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" style="background-image: url({{ page.contact.background }})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -426,25 +429,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Momentum</span>
+                    <span class="copyright">Copyright &copy; {{ page.title }}</span>
                 </div>
                 <div class="col-md-4">
                   <ul class="list-inline social-buttons">
-                    <li><a href="https://twitter.com/{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
+                    <li><a href="https://twitter.com/{{ page.contact.twitter }}"><i class="fa fa-twitter"></i></a>
                     </li>
-                    <li><a href="https://angel.co/{{ page.angellist }}"><i class="fa fa-angellist"></i></a>
+                    <li><a href="https://angel.co/{{ page.contact.angellist }}"><i class="fa fa-angellist"></i></a>
                     </li>
-                    <li><a href="https://linkedin.com/pub/{{ page.linkedin }}"><i class="fa fa-linkedin"></i></a>
+                    <li><a href="https://linkedin.com/pub/{{ page.contact.linkedin }}"><i class="fa fa-linkedin"></i></a>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
