@@ -29,6 +29,12 @@
       .navbar-brand img {
         margin-top:-24px;
       }
+      @media (min-width: 768px) {
+        header .intro-text .intro-heading {
+          font-size:50px;
+          line-height:50px;
+        }
+      }
       section#services .row.text-center + .row.text-center {
         margin-top:1.4em;
       }
@@ -54,12 +60,6 @@
       #team li + li {
         margin-left:20px;
       }
-      /*.team-section {
-        display:none;
-      }
-      .team-section.show {
-        display:block;
-      }*/
       .team.team-member img {
         background-color:white;
         height:220px;
@@ -151,8 +151,8 @@
     <header style="background-image: url({{ page.intro.background }});">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">{{ page.intro.sentences.first }}</div>
-                <div class="intro-heading">{{ page.intro.sentences.second }}</div>
+                <div class="intro-heading">{{ page.intro.sentences.first }}</div>
+                <div class="intro-lead-in">{{ page.intro.sentences.second }}</div>
                 <a href="{{ page.intro.button.link }}" class="btn btn-xl">{{ page.intro.button.text }}</a>
             </div>
         </div>
