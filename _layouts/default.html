@@ -61,15 +61,30 @@
         display:block;
       }*/
       .team.team-member img {
+        background-color:white;
         height:220px;
         width:220px;
       }
-      .partner img {
+
+      .profile {
+        background-color:white;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:50% 50%;
+        margin:0 auto;
+      }
+
+      .partner .profile {
+        border-radius:100px;
+        min-height:200px;
         height:200px;
         width:200px;
       }
-      .ambassador img, .mentor img {
+
+      .ambassador .profile, .mentor .profile {
+        border-radius:75px;
         height:150px;
+        min-height:150px;
         width:150px;
       }
     </style>
@@ -307,7 +322,7 @@
               <div class="col-sm-4">
                 <div class="team-member partner">
                   <a href="{{ partner.link }}">
-                    <img src="{{ partner.logo }}" class="img-responsive img-circle" alt="">
+                    <div class="profile" style="background-image: url({{ partner.logo }});"></div>
                   </a>
                     <h4>{{ partner.name }}</h4>
                     <p class="text-muted">{{ partner.title }}</p>
@@ -334,11 +349,7 @@
               <div class="col-sm-3">
                 <div class="team-member mentor">
                   <a href="{{ mentor.url }}">
-                    {% if mentor.photo == '' %}
-                      <img src="assets/vendor/img/team/1.jpg" class="img-responsive img-circle" alt="{{ mentor.name }}">
-                    {% else %}
-                      <img src="{{ mentor.photo }}" class="img-responsive img-circle" alt="{{ mentor.name }}">
-                    {% endif %}
+                    <div class="profile" style="background-image: url({{ mentor.photo }});"></div>
                   </a>
                   <h4>{{ mentor.name }}</h4>
                   <p class="text-muted">{{ mentor.title }}</p>
@@ -366,7 +377,7 @@
               <div class="col-sm-3">
                 <div class="team-member ambassador">
                   <a href="{{ ambassador.linkedin }}">
-                    <img src="{{ ambassador.photo }}" class="img-responsive img-circle" alt="{{ ambassador.name }}">
+                    <div class="profile" style="background-image: url({{ ambassador.photo }});"></div>
                   </a>
                   <h4>{{ ambassador.name }}</h4>
                   <p class="text-muted">{{ ambassador.city }}</p>
